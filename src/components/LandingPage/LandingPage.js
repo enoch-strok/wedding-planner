@@ -46,7 +46,7 @@ export default function LandingPage(props) {
 
 
               <br />
-              <Button
+              {/* <Button
                 color="primary"
                 size="lg"
                 href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/550315894"
@@ -55,7 +55,7 @@ export default function LandingPage(props) {
               >
                 <i className="fas fa-play" />
                 Our Registry
-              </Button>
+              </Button> */}
             </GridItem>
           </GridContainer>
         </div>
@@ -64,7 +64,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <WorkSection />
           <ProductSection />
-          {/* <TeamSection /> */}
+          <TeamSection />
         </div>
       </div>
       <Footer />
