@@ -8,10 +8,6 @@ import LandingPage from "./components/LandingPage/LandingPage";
 function App() {
   return (
     <div className="App">
-      {/* <BootStrap/>
-      <Header/>
-      We are getting hitched!! */}
-      {/* <Main/> */}
       <LandingPage/>
     </div>
   );
