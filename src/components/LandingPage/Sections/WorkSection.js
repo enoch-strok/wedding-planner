@@ -20,12 +20,9 @@ export default function WorkSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Work with us</h2>
+          <h2 className={classes.title}>RSVP - Reserve Your Spot</h2>
           <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
+            Please let us know if you are planning to make it. We understand that life happens but it helps us to let others who also want to make it take your free spot if you are not able to.
           </h4>
           <form>
             <GridContainer>
@@ -40,14 +37,19 @@ export default function WorkSection() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Email"
-                  id="email"
+                  labelText="Your Phone Number"
+                  id="phone_number"
                   formControlProps={{
                     fullWidth: true,
                   }}
                 />
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
               </GridItem>
-              <CustomInput
+
+              {/* <CustomInput
                 labelText="Your Message"
                 id="message"
                 formControlProps={{
@@ -58,10 +60,14 @@ export default function WorkSection() {
                   multiline: true,
                   rows: 5,
                 }}
-              />
-              <GridItem xs={12} sm={12} md={4}>
-                <Button color="primary">Send Message</Button>
+              /> */}
+
+              
+
+              <GridItem xs={12} sm={12} md={7}>
+                <Button color="success">I Will Be There</Button>
               </GridItem>
+                <Button color="danger">I Cannot Make It</Button>
             </GridContainer>
           </form>
         </GridItem>

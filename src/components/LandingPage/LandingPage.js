@@ -43,9 +43,11 @@ export default function LandingPage(props) {
                 information that can make you or your product create the first
                 impression.
               </h4>
+
+
               <br />
               <Button
-                color="danger"
+                color="primary"
                 size="lg"
                 href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/550315894"
                 target="_blank"
@@ -60,9 +62,9 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
-          <TeamSection />
           <WorkSection />
+          <ProductSection />
+          {/* <TeamSection /> */}
         </div>
       </div>
       <Footer />
