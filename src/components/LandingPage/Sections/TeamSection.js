@@ -30,7 +30,7 @@ export default function TeamSection() {
   );
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Bride & Groom</h2>
+      <h2></h2>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
@@ -38,7 +38,8 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={team1} alt="..." className={imageClasses} />
               </GridItem>
-              <h4 className={classes.cardTitle}>
+              <br></br>
+              <h4>
                 Marina Shkarina
                 <br />
                 <small className={classes.smallTitle}>Bride</small>
@@ -59,7 +60,8 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={team2} alt="..." className={imageClasses} />
               </GridItem>
-              <h4 className={classes.cardTitle}>
+              <br></br>
+              <h4>
                 Enoch Strok
                 <br />
                 <small className={classes.smallTitle}>Groom</small>
@@ -76,6 +78,9 @@ export default function TeamSection() {
             </Card>
           </GridItem>
          
+          
+
+
         </GridContainer>
       </div>
     </div>

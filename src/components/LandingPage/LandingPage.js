@@ -36,13 +36,13 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={20} md={20}>
-              <h1 className={classes.title}>Join Us</h1>
-              <h4>
+              <h2>Join Us</h2>
+              <h5>
                 Every landing page needs a small description after the big bold
                 title, that{"'"}s why we added this text here. Add here all the
                 information that can make you or your product create the first
                 impression.
-              </h4>
+              </h5>
 
 
               <br />
@@ -61,10 +61,26 @@ export default function LandingPage(props) {
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
+        <div>
           <WorkSection />
-          <ProductSection />
-          <TeamSection />
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classes.container}>
+            <ProductSection />
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <div>
+            <TeamSection />
         </div>
       </div>
       <Footer />
