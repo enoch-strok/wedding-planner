@@ -13,7 +13,6 @@ import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
 import team1 from "assets/img/faces/marina2.jpg";
@@ -77,7 +76,6 @@ export default function TeamSection() {
 
             </Card>
           </GridItem>
-         
           
 
 
