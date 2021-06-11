@@ -29,7 +29,7 @@ export default function WorkSection() {
           <br></br>
           <form>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={12} md={12}>
                 <CustomInput
                   labelText="Your Name"
                   id="name"
@@ -38,9 +38,18 @@ export default function WorkSection() {
                   }}
                 />
               </GridItem>
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={12} md={12}>
                 <CustomInput
                   labelText="Your Phone Number"
+                  id="phone_number"
+                  formControlProps={{
+                    fullWidth: true,
+                  }}
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
+                <CustomInput
+                  labelText="Number of Guests"
                   id="phone_number"
                   formControlProps={{
                     fullWidth: true,

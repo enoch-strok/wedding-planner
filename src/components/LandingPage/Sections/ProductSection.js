@@ -28,7 +28,7 @@ export default function ProductSection() {
     <div className={classes.section}>
        {/* <h2 className={classes.title}>Our Registry</h2> */}
       
-      <a href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/550315894?eventType=Wedding"><img src={bbb} width="50%" className=""/></a>
+      <a href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/550315894?eventType=Wedding"><img src={bbb} width="75%" className=""/></a>
       {/* <a src="">Our Registry</a> */}
       <a className="active" width="50%">
 
