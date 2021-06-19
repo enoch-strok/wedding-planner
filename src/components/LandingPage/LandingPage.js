@@ -99,8 +99,8 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
             <TeamSection />
-            <SectionBasics />
-            <SectionNavbars />
+            {/* <SectionBasics /> */}
+            {/* <SectionNavbars /> */}
             
             {/* <Components /> */}
         </div>
