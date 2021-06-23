@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from 'react';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -14,18 +14,30 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+import Registry from "./Sections/Registry.jsx";
+import Pictures from "./Sections/Pictures.jsx";
+import RSVP from "./Sections/RSVP.jsx";
 
 
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
+
 export default function LandingPage(props) {
+
+
   const classes = useStyles();
   const { ...rest } = props;
+  const [inputList, setInputList] = useState([
+    {
+      guestName: "no-name-yet",
+      guestPhone: "no-phone-yet",
+      numberOfGuests: 0
+    }
+  ]);
+
+  
   return (
     <div>
       
@@ -60,7 +72,7 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-          <WorkSection />
+          <RSVP inputList={inputList} setInputList={setInputList}/>
         </div>
       </div>
       <br></br>
@@ -69,7 +81,7 @@ export default function LandingPage(props) {
       <br></br>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-            <ProductSection />
+            <Registry />
         </div>
       </div>
       <br></br>
@@ -78,7 +90,7 @@ export default function LandingPage(props) {
       <br></br>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-            <TeamSection />
+            <Pictures />
             {/* <SectionBasics /> */}
             {/* <SectionNavbars /> */}
             
