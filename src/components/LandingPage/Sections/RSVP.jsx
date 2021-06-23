@@ -28,33 +28,6 @@ const RSVP = (props) => {
   useEffect(() => {
     console.log('addNewProjectField Triggered ',trigger)
   }, [trigger])
-
-  // const submitForm = (event) => {
-  //   event.preventDefault();
-  //   console.log("form submitted!");
-  //   setInputList({
-  //     guestName: event.target[0].value,
-  //     guestPhone: event.target[1].value,
-  //     numberOfGuests: event.target[2].value
-  //   });
-  //   triggerCount();
-  //   AddNewProjectData();
-  // }
-
-  // const AddNewProjectData = (i) => {
-    
-  //   triggerCount();
-  //   axios.post('http://localhost:9000/guest/add', {
-  //     guestName,
-  //     guestPhone,
-  //     numberOfGuests
-  //       })
-  //       .then(res => {
-  //           console.log("Server Response: ",res);
-  //           setTrigger(trigger + 1);
-  //       })
-  //       .catch(err => console.log("Server Error Message: ",err));
-  // }
   
   const submitForm = (event) => {
     event.preventDefault();
@@ -66,7 +39,7 @@ const RSVP = (props) => {
     
     triggerCount();
 
-    axios.post('http://localhost:9000/guest/add', {
+    axios.post('https://wedding-planner-server.herokuapp.com/guest/add', {
       guestName,
       guestPhone,
       numberOfGuests
@@ -94,7 +67,7 @@ const RSVP = (props) => {
           <form onSubmit={submitForm}>
             
               <GridItem xs={12} sm={12} md={12}>
-                <CustomInput
+                <input
                   labelText="Your Name"
                   type="text"
                   id="name"
