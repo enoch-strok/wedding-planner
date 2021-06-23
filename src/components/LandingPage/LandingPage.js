@@ -6,29 +6,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 
-// core components
-import Header from "components/Header/Header.js";
+// core componentsimport Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import Components from "components/Components";
-import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
-
-import SectionBasics from "components/Sections/SectionBasics.js";
-import SectionNavbars from "components/Sections/SectionNavbars.js";
-import SectionTabs from "components/Sections/SectionTabs.js";
-import SectionPills from "components/Sections/SectionPills.js";
-import SectionNotifications from "components/Sections/SectionNotifications.js";
-import SectionTypography from "components/Sections/SectionTypography.js";
-import SectionJavascript from "components/Sections/SectionJavascript.js";
-import SectionCarousel from "components/Sections/SectionCarousel.js";
-import SectionCompletedExamples from "components/Sections/SectionCompletedExamples.js";
-import SectionLogin from "components/Sections/SectionLogin.js";
-import SectionExamples from "components/Sections/SectionExamples.js";
-import SectionDownload from "components/Sections/SectionDownload.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
@@ -36,8 +18,6 @@ import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 
 const dashboardRoutes = [];
 
