@@ -67,7 +67,7 @@ const RSVP = (props) => {
           <form onSubmit={submitForm}>
             
               <GridItem xs={12} sm={12} md={12}>
-                <input
+                <CustomInput
                   labelText="Your Name"
                   type="text"
                   id="name"
