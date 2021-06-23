@@ -126,20 +126,25 @@ const RSVP = (props) => {
       </GridContainer>
       }
       {alerts === 200 &&
-                <Alert variant="success">
+              <GridContainer justify="center">
+                <Alert  variant="success">
                   <Alert.Heading>
                     Thank you for letting us know!
                   </Alert.Heading>
                   <p>Your response has been saved.</p>
+                  <input autoFocus type="hidden" />
                 </Alert>
+              </GridContainer>
       }
       {alerts != 200 && alerts != 0 &&
-                <Alert variant="danger">
-                  <Alert.Heading>
-                    There was an error!
-                  </Alert.Heading>
-                  <p>Please let Enoch know. 206-356-0204</p>
-                </Alert>
+                <GridContainer>
+                  <Alert autoFocus variant="danger">
+                    <Alert.Heading>
+                      There was an error!
+                    </Alert.Heading>
+                    <p>Please let Enoch know. 206-356-0204</p>
+                  </Alert>
+                </GridContainer>
       }
 
     </div>
