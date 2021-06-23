@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -14,7 +15,70 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/work
 
 const useStyles = makeStyles(styles);
 
-export default function WorkSection() {
+const RSVP = (props) => {
+
+  const {inputList, setInputList} = props;
+  useEffect(() => {
+    console.log(inputList)
+  }, [inputList])
+  const {guestName, guestPhone, numberOfGuests} = inputList;
+
+  const [trigger, setTrigger] = useState(0);
+  const triggerCount = () => setTrigger(currCount => currCount + 1);
+  useEffect(() => {
+    console.log('addNewProjectField Triggered ',trigger)
+  }, [trigger])
+
+  // const submitForm = (event) => {
+  //   event.preventDefault();
+  //   console.log("form submitted!");
+  //   setInputList({
+  //     guestName: event.target[0].value,
+  //     guestPhone: event.target[1].value,
+  //     numberOfGuests: event.target[2].value
+  //   });
+  //   triggerCount();
+  //   AddNewProjectData();
+  // }
+
+  // const AddNewProjectData = (i) => {
+    
+  //   triggerCount();
+  //   axios.post('http://localhost:9000/guest/add', {
+  //     guestName,
+  //     guestPhone,
+  //     numberOfGuests
+  //       })
+  //       .then(res => {
+  //           console.log("Server Response: ",res);
+  //           setTrigger(trigger + 1);
+  //       })
+  //       .catch(err => console.log("Server Error Message: ",err));
+  // }
+  
+  const submitForm = (event) => {
+    event.preventDefault();
+    console.log("form submitted!");
+    
+    let guestName = event.target[0].value;
+    let guestPhone = event.target[1].value;
+    let numberOfGuests = +event.target[2].value;
+    
+    triggerCount();
+
+    axios.post('http://localhost:9000/guest/add', {
+      guestName,
+      guestPhone,
+      numberOfGuests
+        })
+        .then(res => {
+            console.log("Server Response: ",res);
+            setTrigger(trigger + 1);
+        })
+        .catch(err => console.log("Server Error Message: ",err));
+  }
+
+
   const classes = useStyles();
   return (
     <div className={classes.section}>
@@ -27,12 +91,14 @@ export default function WorkSection() {
             Please let us know if you are planning to make it. We understand that life happens but it helps us to let others who also want to make it take your free spot if you are not able to.
           </h5>
           <br></br>
-          <form>
-            <GridContainer>
+          <form onSubmit={submitForm}>
+            
               <GridItem xs={12} sm={12} md={12}>
                 <CustomInput
                   labelText="Your Name"
+                  type="text"
                   id="name"
+                  name="name"
                   formControlProps={{
                     fullWidth: true,
                   }}
@@ -51,6 +117,7 @@ export default function WorkSection() {
                 <CustomInput
                   labelText="Number of Guests"
                   id="phone_number"
+                  type="number"
                   formControlProps={{
                     fullWidth: true,
                   }}
@@ -75,18 +142,22 @@ export default function WorkSection() {
               /> */}
 
               
-            </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <Button color="success">I Will Be There</Button>
-                </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
+            
+              {/* <GridContainer> */}
+                {/* <GridItem xs={12} sm={12} md={6}> */}
+                  <Button color="success"
+                  type="submit"
+                  >I Will Be There</Button>
+                {/* </GridItem> */}
+                {/* <GridItem xs={12} sm={12} md={6}> */}
                   <Button color="danger">I Cannot Make It</Button>
-                </GridItem>
-              </GridContainer>
+                {/* </GridItem> */}
+              {/* </GridContainer> */}
           </form>
         </GridItem>
       </GridContainer>
     </div>
   );
 }
+
+export default RSVP;
