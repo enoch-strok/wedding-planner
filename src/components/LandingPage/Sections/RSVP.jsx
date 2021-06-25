@@ -18,13 +18,14 @@ const useStyles = makeStyles(styles);
 
 const RSVP = (props) => {
 
+
   const {inputList, setInputList} = props;
   useEffect(() => {
     console.log(inputList)
   }, [inputList])
 
+  const [status, setStatus] = useState(0);
   const [alerts, setAlerts] = useState(0);
-
   const [trigger, setTrigger] = useState(0);
   const triggerCount = () => setTrigger(currCount => currCount + 1);
   useEffect(() => {
@@ -42,9 +43,11 @@ const RSVP = (props) => {
     triggerCount();
 
     axios.post('https://wedding-planner-server.herokuapp.com/guest/add', {
+    // axios.post('http://localhost:9000/guest/add', {
       guestName,
       guestPhone,
-      numberOfGuests
+      numberOfGuests,
+      status
         })
         .then(res => {
             console.log("Server Response: ",res);
@@ -115,10 +118,15 @@ const RSVP = (props) => {
                 <GridItem xs={12} sm={12} md={6}>
                   <Button color="success"
                   type="submit"
+                  onClick={() => setStatus("yes")}
                   >I Will Be There</Button>
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
-                  <Button color="danger">I Cannot Make It</Button>
+                  <Button 
+                  type="submit"
+                  color="danger"
+                  onClick={() => setStatus("no")}
+                  >I Cannot Make It</Button>
                 </GridItem>
               </GridContainer>
           </form>
