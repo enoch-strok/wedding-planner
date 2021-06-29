@@ -74,7 +74,7 @@ export default function LandingPage(props) {
       <br></br>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-            <Pictures />
+            {/* <Pictures /> */}
             {/* <SectionBasics /> */}
             {/* <SectionNavbars /> */}
             
