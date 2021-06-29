@@ -25,12 +25,30 @@ export default function Intro() {
        <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={20} md={20}>
-              <h2 style={{color: "black"}}>Join Us</h2>
+              {/* <h2 style={{color: "black"}}>Join Us</h2>
               <h5  className={classes.description}>
-                Every landing page needs a small description after the big bold
-                title, that{"'"}s why we added this text here. Add here all the
-                information that can make you or your product create the first
-                impression.
+                We would love to have you join us for our celebration of two becoming one!
+              </h5>
+              {<br></br>} */}
+              <h2 style={{color: "black"}}>
+              Ecclesiastes 4:9-12
+              </h2>
+              <br></br>
+              <h5 className={classes.description}>
+              Two are better than one,
+              because they have a good return for their labor:
+              {<br></br>}{<br></br>}
+              If either of them falls down,
+              one can help the other up.
+              But pity anyone who falls
+              and has no one to help them up.
+              {<br></br>}{<br></br>}
+              Also, if two lie down together, they will keep warm.
+              But how can one keep warm alone?
+              {<br></br>}{<br></br>}
+              Though one may be overpowered,
+              two can defend themselves.
+              A cord of three strands is not quickly broken.
               </h5>
 
 
