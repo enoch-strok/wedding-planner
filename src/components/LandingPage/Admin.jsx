@@ -14,6 +14,7 @@ import Registry from "./Sections/Registry.jsx";
 import Pictures from "./Sections/Pictures.jsx";
 import RSVP from "./Sections/RSVP.jsx";
 import Intro from "./Sections/Intro.jsx";
+import AdminData from "./Sections/AdminData.jsx";
 
 
 const dashboardRoutes = [];
@@ -21,7 +22,7 @@ const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
 
-export default function LandingPage(props) {
+export default function Admin(props) {
 
 
   const classes = useStyles();
@@ -47,41 +48,10 @@ export default function LandingPage(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-            <Intro />
+            <AdminData />
         </div>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div>
-          <RSVP inputList={inputList} setInputList={setInputList}/>
-        </div>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-            <Registry />
-        </div>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div>
-            {/* <Pictures /> */}
-            {/* <SectionBasics /> */}
-            {/* <SectionNavbars /> */}
-            
-            {/* <Components /> */}
-        </div>
-      </div>
-      <Footer />
+
     </div>
   );
 }

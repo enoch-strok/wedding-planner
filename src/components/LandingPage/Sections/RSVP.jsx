@@ -13,6 +13,7 @@ import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
+import Parallax from "components/Parallax/Parallax.js";
 
 const useStyles = makeStyles(styles);
 
@@ -69,6 +70,7 @@ const RSVP = (props) => {
       
       {alerts === 0 &&
       <GridContainer justify="center">
+
         <GridItem cs={12} sm={12} md={8}>
           <h2>RSVP - Reserve Your Spot</h2>
           <br></br>
