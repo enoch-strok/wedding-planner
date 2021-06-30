@@ -21,10 +21,10 @@ export default function ProductSection() {
   return (
     <div className={classes.section}>
       <GridContainer justify="space-evenly">
-        <GridItem justify="space-evenly" cs={4} sm={4} md={4}>
+        <GridItem className="shadow-none p-3 bg-white rounded" justify="space-evenly" cs={4} sm={4} md={4}>
           <h5  className={classes.description}> The only gift we ask from you is to celebrate with us on this special day. However, for your convenience, we have registered with Bed Bath & Beyond for the items we found most useful in preperation for our new life together!</h5>
         </GridItem>
-        <GridItem justify="space-evenly" className="shadow p-3 bg-white rounded" cs={7} sm={7} md={7}>
+        <GridItem className="shadow p-3 bg-white rounded click" justify="space-evenly" cs={7} sm={7} md={7}>
           {/* <GridItem width='5' cs={1} sm={1} md={1}>
             <img src={linkImage}/>
           </GridItem> */}
